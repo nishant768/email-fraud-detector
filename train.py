@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 import pickle
 
 # Load data
-data = pd.read_csv("email.csv")
+data = pd.read_csv("emails.csv")
 
 X = data['text']
 y = data['label']
