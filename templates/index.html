@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Fraud Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Email Fraud Detection</h1>
+
+    <form action="/predict" method="post">
+        <textarea name="email" placeholder="Paste your email here..."></textarea>
+        <br>
+        <button type="submit">Check Email</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</div>
+
+</body>
+</html>
